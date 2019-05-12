@@ -4,14 +4,17 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - _nb_ext_conf=0.4.0=py35_1
+  - anaconda-client=1.7.2=py35_0
   - asn1crypto=0.24.0=py35_3
   - backcall=0.1.0=py_0
   - blas=1.0=mkl
   - bleach=3.1.0=py_0
-  - ca-certificates=2019.3.9=hecc5488_0
-  - certifi=2018.8.24=py35_1001
+  - ca-certificates=2019.1.23=0
+  - certifi=2018.8.24=py35_1
   - cffi=1.11.5=py35hfa6e2cd_1
   - click=7.0=py_0
+  - clyent=1.2.2=py35_1
   - colorama=0.4.1=py_0
   - cryptography=2.3.1=py35h74b6da3_0
   - cryptography-vectors=2.3.1=py35_0
@@ -33,7 +36,7 @@ dependencies:
   - idna=2.7=py35_2
   - imageio=2.1.2=py35_0
   - intel-openmp=2019.3=203
-  - ipykernel=5.1.0=pyh24bf2e0_0
+  - ipykernel=4.10.0=py35_0
   - ipython=7.0.1=py35h39e3cac_0
   - ipython_genutils=0.2.0=py_1
   - ipywidgets=5.1.5=py35_0
@@ -42,7 +45,7 @@ dependencies:
   - jinja2=2.10.1=py_0
   - jpeg=9c=hfa6e2cd_1001
   - jsonschema=2.6.0=py35_2
-  - jupyter=1.0.0=py_2
+  - jupyter=1.0.0=py35_7
   - jupyter_client=5.2.4=py_3
   - jupyter_console=6.0.0=py_0
   - jupyter_core=4.4.0=py_0
@@ -59,15 +62,19 @@ dependencies:
   - mistune=0.8.3=py35hfa6e2cd_2
   - mkl=2018.0.3=1
   - msys2-conda-epoch=20160418=1
+  - nb_anacondacloud=1.4.0=py35_0
+  - nb_conda=2.2.1=py35_0
+  - nb_conda_kernels=2.1.0=py35_0
   - nbconvert=5.5.0=py_0
   - nbformat=4.4.0=py_1
+  - nbpresent=3.0.2=py35_0
   - networkx=2.3=py_0
   - notebook=5.7.0=py35_0
   - numpy=1.11.3=py35h53ece5f_10
   - numpy-base=1.11.3=py35h8128ebf_10
   - olefile=0.46=py_0
   - opencv3=3.1.0=py35_0
-  - openssl=1.0.2r=hfa6e2cd_0
+  - openssl=1.0.2p=hfa6e2cd_0
   - pandas=0.23.4=py35h830ac7b_0
   - pandoc=2.7.2=0
   - pandocfilters=1.4.2=py_1
@@ -84,6 +91,7 @@ dependencies:
   - pyparsing=2.4.0=py_0
   - pyqt=4.11.4=py35_2
   - pyreadline=2.1=py35_1000
+  - pysocks=1.6.8=py35_0
   - python=3.5.2=5
   - python-dateutil=2.8.0=py_0
   - python-engineio=3.0.0=py_0
@@ -91,6 +99,7 @@ dependencies:
   - pytz=2019.1=py_0
   - pywavelets=1.0.1=py35h452e1ab_0
   - pywinpty=0.5.4=py35_2
+  - pyyaml=3.13=py35hfa6e2cd_0
   - pyzmq=17.1.2=py35hf576995_0
   - qt=4.8.7=vc14_7
   - qtconsole=4.4.4=py_0
@@ -116,9 +125,11 @@ dependencies:
   - werkzeug=0.15.2=py_0
   - wheel=0.32.0=py35_1000
   - widgetsnbextension=1.2.3=py35_1
+  - win_inet_pton=1.0.1=py35_1
   - win_unicode_console=0.5=py35_0
   - wincertstore=0.2=py35_1002
   - winpty=0.4.3=4
+  - yaml=0.1.7=hc54c509_2
   - zeromq=4.2.5=he025d50_4
   - zlib=1.2.11=h2fa13f4_1004
   - pip:
@@ -127,4 +138,5 @@ dependencies:
     - requests==2.21.0
     - tqdm==4.31.1
     - urllib3==1.24.3
+
 
