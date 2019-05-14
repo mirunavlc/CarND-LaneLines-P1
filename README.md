@@ -12,7 +12,7 @@ For running this project having [Miniconda](https://docs.conda.io/en/latest/mini
 
 After having it, open a conda command prompt and create the proper environment for this project:
 
-`conda env create -f environment.yml `
+`conda env create -f environment_setup.yml `
 
 This environment contains Python 3 and the necessary packages. Do not forget to activate it:
 
@@ -43,13 +43,19 @@ The tools used are color selection, region of interest selection, grayscaling, G
 
 The proposed pipeline consists of 7 main steps, applied in the following order:
 
+[image1]: ./test_images_output/grayscale.png "Grayscale"
 * **grayscale**          - applies a grayscale filter over a given color image
+
+[image2]: ./test_images_output/blur.png "Gaussian smoothing"
 * **gaussian_blur**      - blurs the given image using a Gaussian filter, thus preserving the edges
+
+[image3]: ./test_images_output/canny_region.png "Canny Edge Detection and region of interest selection"
 * **canny**              - applies a Canny Transform in order to obtain the edges
 * **region_of_interest** - maintains intact the specified region and fills the rest with black 
+
+[image3]: ./test_images_output/hough_draw.png "Hough Transform and line extrapolation"
 * **hough_lines**		 - applies the Hough Transform to the given image so that the lines found in image are found
 * **draw_lines**         - [called by hough_lines] draws the given lines onto the given image with the specified color and thickness
-* **weighted_img**       - overlaps 2 images, one with a higher grade of opacity and one with a lower grade of opacity 
 
 In order to draw a single line on the left and right lanes, `draw_lines()` takes the lines provided by the `cv2.HoughLinesP()` and computes them as it follows: 
 
@@ -59,6 +65,8 @@ In order to draw a single line on the left and right lanes, `draw_lines()` takes
 
 - start and end vertices are needed to define the lines aimed to be drawn: so the Ys are fixed to max/min and, using the previous obtained equations, the Xs are calculated
 
+[image3]: ./test_images_output/weight.png "Image overlapping"
+* **weighted_img**       - overlaps 2 images, one with a higher grade of opacity and one with a lower grade of opacity 
 
 ### 2. Potential shortcomings and suggestions
 
